@@ -1,29 +1,37 @@
-var data = [ {age: 13},
-             {age: 15},
-             {age: 16},
-             {age: 12}, ];
 
+var data = {};
 
-function getData(data) {
-$('form#filter').on('change', function(data) {
-    $.ajax({
-        url: '/someurl',
-        type: 'get',
-        dataType: 'json',
-        data: data,
-        success: function(data) {
-            alert('got data successffuly');
+function getData() {
 
-         },
-        fail: function(data){
-            alert('did not retrieve data');
-        }
-    });
-});
+    $.get('https://api.myjson.com/bins/1d8jm3', function (camps) {
+
+       //console.log(camps.summerCamps.campData);
+        data = camps.summerCamps.campData;
+       // console.log(data);
+    },'json')
+    
+    .done(function (camps) {
+        data = camps.summerCamps;
+    })
+
+    .fail(function () {
+        alert('unsuccessful');
+    })
 
 }
 
+function filterByCategory(category, data){
+    console.log(data);
+}
 
-getData(data);
-alert('thanks');
+
+$(document).ready(function () {
+    getData();
+    filterByCategory("sports", data); 
+    console.log(data);
+});
+
+
+
+
 //jQuery.parseJSON
