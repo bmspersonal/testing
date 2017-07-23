@@ -1,0 +1,390 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"to",
+				"totalPlayers"
+			],
+			[
+				"se",
+				"setNextPlayerTurn"
+			],
+			[
+				"current",
+				"currentPlayerTurn"
+			],
+			[
+				"clo",
+				"closePopup"
+			],
+			[
+				"allow",
+				"allowRoll"
+			],
+			[
+				"all",
+				"allowRoll"
+			],
+			[
+				"handle",
+				"handleAction"
+			],
+			[
+				"doubl",
+				"doubleCounter"
+			],
+			[
+				"dou",
+				"doubleCounter"
+			],
+			[
+				"sub",
+				"subject"
+			],
+			[
+				"i",
+				"itcStudents"
+			],
+			[
+				"new",
+				"newTemp"
+			],
+			[
+				"Tem",
+				"TempTracker"
+			],
+			[
+				"hig",
+				"high"
+			],
+			[
+				"high",
+				"highscore"
+			],
+			[
+				"backg",
+				"backgroundImage"
+			],
+			[
+				"get",
+				"getElementById"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 129.0,
+		"last_filter": "git push",
+		"selected_items":
+		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git add all",
+				"Git: Add All"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git push ",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git commit ",
+				"Git: Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"init",
+				"Git: Init"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 571.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Git/monopoly/css/common.css",
+		"/C/Git/monopoly/css/monopoly.css",
+		"/C/Git/monopoly/js/monopoly.js",
+		"/C/Git/monopoly/index.html",
+		"/C/Git/memory-game/memory_game/memory_game/memory_game.js",
+		"/C/Dev/OOP/oop syntax",
+		"/C/Dev/OOP/ad12.html",
+		"/C/Dev/OOP/Dome.js",
+		"/C/Dev/OOP/Jackson.js",
+		"/C/Dev/OOP/oop1.html",
+		"/C/Dev/OOP/oop2.html",
+		"/C/Git/minecraft/minecraft2D/index.html",
+		"/C/Git/minecraft/minecraft2D/JS/minecraft.js",
+		"/C/Git/minecraft/minecraft2D/CSS/minecraft-style.css",
+		"/C/Git/memory-game/memory_game/memory_game/memory.html",
+		"/C/Git/memory-game/memory_game/memory_game/memory_game_style.css",
+		"/C/Dev/Web fonts/bootstrapskel.html",
+		"/C/Git/memory_game/memory.html",
+		"/C/Git/memory_game/memory_game_style.css",
+		"/C/Git/memory_game/memory_game.js",
+		"/C/Dev/Apple Website/Apple.html",
+		"/C/Git/draw/index.html",
+		"/C/Dev/JS/ad11.html",
+		"/C/Dev/Web fonts/bootstrap1.html"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"createplay",
+			"jail",
+			"start",
+			"init",
+			"jail",
+			"init",
+			"getpopup",
+			"community",
+			"id",
+			"adjustboard",
+			"update",
+			"board",
+			"updateplayer",
+			"closeand",
+			"doubles",
+			"setnext",
+			"handlebuy",
+			"handlebut",
+			"updateplayer",
+			"getcurrentplayer",
+			"setnext",
+			"handlepay",
+			"setnextplayer",
+			"closeandnext",
+			"handlepay",
+			"handlebuy",
+			"closeandnext",
+			"parseint",
+			"data-money",
+			"getcurrentplayer",
+			"updateplayers",
+			"go",
+			"handlego",
+			"go",
+			"showpopup",
+			"getpop",
+			"monopoly.showpopup",
+			"updateplayer",
+			"jailed",
+			"jail",
+			"handlegotojail",
+			"jail",
+			"closeandnext",
+			"updateplayers",
+			"setnextplayer",
+			"initdice",
+			"rolldice",
+			"setnextplayer",
+			"allowroll",
+			"console.log",
+			"\");\n",
+			"handleaction",
+			"getcurrentplayer",
+			"jail",
+			"playsou",
+			"handlebuy",
+			"buypro",
+			"handlebuy",
+			"handleaction",
+			"doublecounter",
+			"rolldice",
+			"showpopup",
+			"chanceJson",
+			"chance",
+			"community",
+			"getpopup",
+			"popup",
+			"student",
+			"students",
+			"memoryGame"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Student",
+			"Students",
+			"<!"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "",
+	"project": "README.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 404.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
