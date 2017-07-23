@@ -10,12 +10,17 @@ body{
     border-radius:0;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: black;
+    color: #7f6e6e;
     font-size: 12px;
 }
  .col-md-7{
 	background-color: white;
 	height: 410px;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #7f6e6e;
+    background-color: transparent;
+    font-size: 16px;
 }
 
 .no-padding{
