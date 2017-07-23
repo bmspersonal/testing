@@ -4,17 +4,55 @@
 		<title>Daniel Turgeman </title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Daniel Turgeman">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	</head>
 	<body>
 	
 
     <form id="filter" class="filter">
-    <input type="hidden" name="token" value="7mLw36HxPTlt4gapxLUKWOpe1GsqA0I5"> 
-    <input type="checkbox" class="mychoice" name="name" value="apple"> Apple
-    <input type="checkbox" class="mychoice" name="name" value="orange"> Orange      
-    <input type="checkbox" class="mychoice" name="name" value="pear"> Pear
+
+        <h3>Find your camp!</h3>
+        <label for="country">Please choose a country of your liking</label>
+        
+        <section name="country">
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" value="country" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Countries
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">United States</a>
+            <a class="dropdown-item" href="#">India</a>
+            <a class="dropdown-item" href="#">Germany</a>
+            </div>
+            </div>
+
+        </section>
+
+
+
+        <section name="category">
+            <label for="category">Choose your category!</label>
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+            </button>
+            <div class="dropdown-menu" value="category" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Sports</a>
+            <a class="dropdown-item" href="#">Arts</a>
+            <a class="dropdown-item" href="#">Academic</a>
+            </div>
+            </div>
+            </section>
+
+            
+
   </form>
 		
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./Javascript/filter.js"></script>
 
 	</body>
 </html>
