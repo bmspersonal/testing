@@ -1,12 +1,27 @@
 body{
 	margin:0;
+    font-family: 'Montserrat', sans-serif;
+	background-color: white;
 }
 .navbar-inverse {
-    background-color: #c9c5c5;
+    background-color: white;
     margin-bottom: 0;
     border:none;
     border-radius:0;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: white;
+    color: black;
+    font-size: 12px;
 }
+ .col-md-7{
+	background-color: white;
+	height: 410px;
+}
+
+.no-padding{
+	padding:0;
+}
+.row {
+    text-align: center;
+}
+
