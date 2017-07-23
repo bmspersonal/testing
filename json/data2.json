@@ -1,0 +1,45 @@
+{
+"summerCamps" : {
+	"listOfCamps":[150,151,152],
+	"campData":[
+		{
+			"id":"",
+			"name": "",
+			"description": "",
+			"contactInformation": ["",""],
+			"organiser": "",
+			"address": "",
+			"location": "",
+			"country": "",
+			"dates": ["",""],
+			"duration": "",
+			"time":"",
+			"agegroup": "",
+			"cost": "",
+			"prebookingDiscount": "",
+			"category": "",
+			"rating": ""
+        },
+        {
+			"id":"",
+			"name": "",
+			"description": "",
+			"contactInformation": ["",""],
+			"organiser": "",
+			"address": "",
+			"location": "",
+			"country": "",
+			"dates": ["",""],
+			"duration": "",
+			"time":"",
+			"agegroup": "",
+			"cost": "",
+			"prebookingDiscount": "",
+			"category": "",
+			"rating": ""
+		}
+		
+	]
+	
+}
+}
