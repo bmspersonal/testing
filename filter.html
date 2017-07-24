@@ -5,14 +5,56 @@
 		<meta charset="UTF-8">
 		<meta name="author" content="Daniel Turgeman">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./css/filter.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="./images/favicon-ete.png">
-
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/filter.css">        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+         <link rel="stylesheet" href="css/animate.css">
 	</head>
 	<body>
-        <a href="#"><img class="logo tada animated infinite" src="./images/ete-logo.png"/></a>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+            </div>
+           <div id="navbar" class="navbar-collapse collapse">
+          <ul class="my-logo">
+           <li><a href="our-project.html"><img class="logo tada animated infinite" src="./images/ete-logo.png"/></a></li>
+          </ul>
+            <ul class="nav navbar-nav tool"> 
+            <li><a href="filter.html">FIND YOUR CAMP</a></li>
+               <li><a href="#myCarousel">FEATURES</a></li>
+               <li><a href="#aboutUs">ABOUT US</a></li>
+               <li><a href="#feedback">FEEDBACK</a></li>
+               <li><a href="#theTeam">THE TEAM</a></li>
+               <li><a href="#contactUs">CONTACT US</a></li>            
+              </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LANGUAGE <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">French</a></li>
+                  <li><a href="#">Indian</a></li>
+                  <li><a href="#">Russian</a></li>
+                  <li><a href="#">Italia</a></li>
+                  <li><a href="#">Hebreu</a></li>
+         </ul>
+        </li>
+            </ul>
+           </div>
+        </div>
+    </nav>
 
         <div class="filter-box">
             <label>Select Country: </label>
@@ -60,7 +102,7 @@
             </div>
         </div>
         <div class="content-table">
-            <table id="content-data" border="1" class ="table" style="display:none">
+            <table class="table table-bordered table-hover" id="content-data" border="1" class ="table" style="display:none">
               <thead>
                <tr> 
                 <th>Name</th>
@@ -75,88 +117,6 @@
             </table>
         </div>
 
-
-    <form id="filter" class="filter">
-
-        <h3>Find your camp!</h3>
-        <label for="country">Please choose a country of your liking</label>
-        
-        <!-- <section name="country"> -->
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" value="country" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Countries
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">United States</a>
-            <a class="dropdown-item" href="#">India</a>
-            <a class="dropdown-item" href="#">Germany</a>
-            </div>
-            </div>
-
-        <!-- </section> -->
-
-
-
-        <!-- <section name="category"> -->
-            <label for="category">Choose your category!</label>
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
-            </button>
-            <div class="dropdown-menu" value="category" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Sports</a>
-            <a class="dropdown-item" href="#">Arts</a>
-            <a class="dropdown-item" href="#">Academic</a>
-            </div>
-            </div>
-         <!-- </section> -->
-
-         
-        <section name="ages">
-            <label for="ages">Age group of the participants</label>
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Ages
-            </button>
-            <div class="dropdown-menu" value="category" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">5-8</a>
-            <a class="dropdown-item" href="#">8-13</a>
-            <a class="dropdown-item" href="#">13-16</a>
-            <a class="dropdown-item" href="#">16+</a>
-            </div>
-            </div>
-         </section>
-
-        <!-- <section name="duration"> -->
-            <label for="duration">Duration</label>
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Program length
-            </button>
-            <div class="dropdown-menu" value="category" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Less than one month</a>
-            <a class="dropdown-item" href="#">1-2 Months</a>
-            <a class="dropdown-item" href="#">2 or more months</a>
-            </div>
-            </div>
-         <!-- </section>          -->
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-
-         <label value="submit">Submit</label><br />
-         <input type="submit" value="submit" class="btn btn-secondary">
-
-
-  </form>
 		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->

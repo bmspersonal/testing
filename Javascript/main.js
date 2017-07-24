@@ -7,15 +7,15 @@ var summerCamps = $.get("https://api.myjson.com/bins/akqr3", function(data) {
 }, 'json');
 
 addEventsFilters();
-addClick();
 
 function addEventsFilters(){
     $("input:checkbox").click(callFilters);
 }
 
 function addClick(){
-
-$(table).find("span").click(function () {
+console.log("addlclick");
+console.log(table);
+table.find("span").click(function () {
 alert("clicked");
 })
 
@@ -28,7 +28,8 @@ function callFilters(){
     var durationData = durationFilter(categoryData);
     var ageData = ageFilter(durationData);
     createTable(ageData);
-   // $(".content-table").text(JSON.stringify(durationData));//Testing out stuff
+    addClick();
+
 }
 
 function countryFilter(obj) {
@@ -130,9 +131,10 @@ function createTable(ageData){
     for(var i = 0; i < max; i++){
         
         var row = $("<tr/>");
+        row.addClass("table-active")
         var text = $("<span/>");
 
-        text.addClass("clickable").text(ageData[i].name);
+        text.addClass("clickable").text(ageData[i].name).css({"text-decoration" : "underline","cursor" : "pointer"});
 
 
         $("<td/>").attr("id", ageData[i].id).append(text).appendTo(row);
