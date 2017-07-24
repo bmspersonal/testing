@@ -1,0 +1,24 @@
+     body {
+
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            a {
+                display: block;
+            }
+
+            a img.logo{
+                width:10%;
+            }
+
+            .filter-box{
+                display:inline-block;
+                width:200px;
+            }
+
+            .content-table{
+                width: 80%;
+                display: inline-block;
+            }
+
+            
