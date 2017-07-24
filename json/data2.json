@@ -1,6 +1,6 @@
 {
 "summerCamps" : {
-	"listOfCamps":[150, 151, 152, 153, 154, 155, 156],
+	"listOfCamps":[150, 151, 152, 153, 154, 155, 156, 157, 158, 159],
 	"campData":[
 		{
 			"id":"150",
@@ -37,7 +37,7 @@
 			"prebookingDiscount": "5%",
 			"category": "Sports",
 			"rating": "3.5"
-		}
+		},
         {
 			"id":"152",
 			"name": "Camp Hilltop",
@@ -55,7 +55,7 @@
 			"prebookingDiscount": "15%",
 			"category": "Adventure",
 			"rating": "3.8"
-		}
+		},
         {
 			"id":"153",
 			"name": "Georgetown University Summer Programs for High School Students",
@@ -73,7 +73,7 @@
 			"prebookingDiscount": "20%",
 			"category": "Academic",
 			"rating": "4.0"
-		}
+		},
         {
 			"id":"154",
 			"name": "Camp Fitch YMCA",
@@ -91,7 +91,7 @@
 			"prebookingDiscount": "5%",
 			"category": "Adventure",
 			"rating": "3.7"
-		}
+		},
         {
 			"id":"155",
 			"name": "Shane Weight Loss Camp California",
@@ -109,7 +109,7 @@
 			"prebookingDiscount": "10%",
 			"category": "Health",
 			"rating": "3.3"
-		}
+		},
         {
 			"id":"156",
 			"name": "Christian Youth Theatre",
@@ -127,7 +127,7 @@
 			"prebookingDiscount": "0%",
 			"category": "Arts",
 			"rating": "3.1"
-		}
+		},
         {
 			"id":"157",
 			"name": "Cam Victory Military Adventures",
@@ -145,7 +145,7 @@
 			"prebookingDiscount": "15%",
 			"category": "Special Needs",
 			"rating": "3.8"
-		}
+		},
         {
 			"id":"158",
 			"name": "Camp Olympia",
@@ -163,7 +163,7 @@
 			"prebookingDiscount": "10%",
 			"category": "Adventure",
 			"rating": "3.9"
-		}
+		},
         {
 			"id":"159",
 			"name": "Game Champ Nation",
@@ -184,6 +184,5 @@
 		}
 		
 	]
-	
 }
 }

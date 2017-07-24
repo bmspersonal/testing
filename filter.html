@@ -10,19 +10,80 @@
             a {
                 display: block;
             }
+
+            .filter-box{
+                display:inline-block;
+                width:200px;
+            }
+
+            .content-table{
+                width: 80%;
+                display: inline-block;
+            }
         </style>
 
 
 	</head>
 	<body>
-	
+    
+        <div class="filter-box">
+            <label>Select Country: </label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="country" value="India" /> India</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="country" value="United States" /> United States</label>
+            </div>
+            <br /><br />
+            <label>Select Category: </label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="category" value="All" /> All</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="category" value="Cooking" /> Cooking</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="category" value="Adventure" /> Adventure</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="category" value="Education" /> Education</label>
+            </div>
+            <br /><br />
+            <label>Limit Duration: </label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="duration" value="1" /> Less than 1 month</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="duration" value="2" /> 1-2 months</label>
+            </div>
+            <br /><br />
+            <label>Age Groups: </label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="age" value="5-8" /> 5-8 years</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="age" value="9-12" /> 9-12 years</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="age" value="13-15" /> 13-15 years</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="age" value="15-18" /> 15+ years</label>
+            </div>
+        </div>
+        <div class="content-table">
+            <table id="content-data" border="1" style="display:none;">
+
+            </table>
+        </div>
+
 
     <form id="filter" class="filter">
 
         <h3>Find your camp!</h3>
         <label for="country">Please choose a country of your liking</label>
         
-        <section name="country">
+        <!-- <section name="country"> -->
             <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" value="country" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Countries
@@ -34,11 +95,11 @@
             </div>
             </div>
 
-        </section>
+        <!-- </section> -->
 
 
 
-        <section name="category">
+        <!-- <section name="category"> -->
             <label for="category">Choose your category!</label>
             <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +111,7 @@
             <a class="dropdown-item" href="#">Academic</a>
             </div>
             </div>
-         </section>
+         <!-- </section> -->
 
          
         <section name="ages">
@@ -68,7 +129,7 @@
             </div>
          </section>
 
-        <section name="duration">
+        <!-- <section name="duration"> -->
             <label for="duration">Duration</label>
             <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,7 +141,7 @@
             <a class="dropdown-item" href="#">2 or more months</a>
             </div>
             </div>
-         </section>         
+         <!-- </section>          -->
 
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,6 +164,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="./Javascript/filter.js"></script>
+    <script src="./Javascript/dans.js"></script>
 
 	</body>
 </html>
