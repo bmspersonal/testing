@@ -1,9 +1,9 @@
 var SummerCamps = {};
 var table = $("#content-data");
 
-
-var summerCamps = $.get("https://api.myjson.com/bins/e1hhr", function(data) {
+var summerCamps = $.get("https://api.myjson.com/bins/dpag7", function(data) {
     SummerCamps.CampData = Object.assign({}, data);
+    callFilters();
 }, 'json');
 
 addEventsFilters();
@@ -17,8 +17,7 @@ console.log("addlclick");
 console.log(table);
 table.find("span").click(function () {
     selectCamp(SummerCamps.CampData.summerCamps, parseInt(this.id));
-})
-
+});
 }
 
 function callFilters(){
@@ -29,7 +28,6 @@ function callFilters(){
     var ageData = ageFilter(durationData);
     createTable(ageData);
     addClick();
-
 }
 
 function countryFilter(obj) {
@@ -95,7 +93,6 @@ function durationFilter(obj) {
         return obj;
 }
 
-
 function ageFilter(obj) {
     var ageList = $("input[name=age]");
     var selectAge = [];
@@ -123,29 +120,21 @@ function ageFilter(obj) {
 }
 
 function createTable(ageData){
-
     console.log("in create table");
-
     var max = Math.max(ageData.length);
-   
     for(var i = 0; i < max; i++){
-        
         var row = $("<tr/>");
         row.addClass("table-active")
         var text = $("<span/>");
-
         text.addClass("clickable").attr("id", ageData[i].id).text(ageData[i].name).css({"text-decoration" : "underline","cursor" : "pointer"});
         text.attr({"data-toggle":"modal","data-target":"#campModal"});
-
         $("<td/>").append(text).appendTo(row);
         $("<td/>").text(ageData[i].country).appendTo(row);
         $("<td/>").text(ageData[i].category).appendTo(row);
         $("<td/>").text(ageData[i].duration).appendTo(row);
         $("<td/>").text(ageData[i].agegroup).appendTo(row);
         row.appendTo($("#content-data tbody"));
-
     }
-    
     table.show();
 }
 
@@ -154,7 +143,6 @@ function clearTable(){
 }
 
 function selectCamp(input, number) {
-    //alert();
     var index = input.listOfCamps.indexOf(number);
     console.log(input, number, index);
     var selectedCamp = input.campData[index];
@@ -163,15 +151,11 @@ function selectCamp(input, number) {
     $(".modal-header").css("background-color", "#90EE90");
     $(".modal-footer").css("background-color","#FFD4AA")
     var showProp = Object.keys(selectedCamp);
-    console.log(showProp);
-        for(var i = 3; i < showProp.length; i++) {
-            $("#"+showProp[i]).text(showProp[i]+": "+selectedCamp[showProp[i]]);
-        }
-        
+    for(var i = 3; i < showProp.length; i++) {
+        $("#"+showProp[i]).text(showProp[i]+": "+selectedCamp[showProp[i]]);
+    }
 }
+
 $("#register").on("click", function(){
     window.open( "payment.html", "_blank")
 });
-// setTimeout(function(){
-// selectCamp(SummerCamps.CampData.summerCamps, 151)
-// }, 2000);

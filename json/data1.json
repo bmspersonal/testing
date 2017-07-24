@@ -143,7 +143,7 @@
 			"agegroup": "4 - 14 years",
 			"cost": "Rs 5000 - 6000",
 			"prebookingDiscount": "20%",
-			"category": "Art",
+			"category": "Arts",
 			"rating": "3.6"
 		},
         {
@@ -179,7 +179,7 @@
 			"agegroup": "4 - 16 years",
 			"cost": "Rs 5000 - 8000",
 			"prebookingDiscount": "10%",
-			"category": "Art",
+			"category": "Arts",
 			"rating": "3.8"
 		},
         {
@@ -287,7 +287,7 @@
 			"agegroup": "15-18 years",
 			"cost": "$12,000",
 			"prebookingDiscount": "20%",
-			"category": "Academic",
+			"category": "Education",
 			"rating": "4.0"
 		},
         {
