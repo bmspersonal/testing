@@ -1,59 +1,28 @@
-var filters = {};
-	filters = fetchdata();
-	console.log(filters);
+var SummerCamps = {};
 
-var resjson = "";
-	function fetchdata() {
-	$.get("https://api.myjson.com/bins/1d8jm3",	function(data) {
-		resjson = JSON.stringify(data.summerCamps.campData);
-		//console.log(JSON.parse(resjson));
-		return resjson;
-	}, 'json');
-}
 
-function countryFilter(obj, countryname) {
-	var selectCountry = [];
-	var objson = JSON.parse(obj);
-	for (var i = 0; i < objson.length; i++) {
-		if (objson[i].country == countryname) {
-			console.log(countryname);
-				selectCountry.push(objson[i]);
-		}	
-	}
-	return selectCountry;
-}
+var summerCamps = $.get("https://api.myjson.com/bins/akqr3", function(data) {
+    SummerCamps.CampData = Object.assign({}, data);
+}, 'json');
 
-/*$(document).ready(function(){
-var resjson = {};
-	
-	$.get("https://api.myjson.com/bins/1d8jm3",	function(campdata) {
-		resjson = campdata.summerCamps.campData;
-	}, 'json');
-	countryFilter(resjson, "India");
-	});
 
-function countryFilter(obj, countryname) {
-	var selectCountry = [];
-	for (var i = 0; i < obj.length; i++) {
-		if (obj[i].country == countryname) {
-				selectCountry.push(obj[i]);
-		}	
-	}
-	return selectCountry;
-}*/
-
-/*function durationFilter(obj, durationlength) {
-	var selectDuration = [];
-	for (var i = 0; i < obj.length; i++) {
-		if(obj[i].duration.indexOf("days")) {
-
+function selectCamp(input, number) {
+	var index = input.listOfCamps.indexOf(number);
+	var selectedCamp = input.campData[index];
+	$("h3.modal-title").append(selectedCamp.name).css("font-weight", "bold");
+	$("h4.modal-title").append(selectedCamp.description);
+	var showProp = Object.keys(selectedCamp);
+	console.log(showProp);
+		for(var i = 3; i < showProp.length; i++) {
+			$("#"+showProp[i]).text(showProp[i]+": "+selectedCamp[showProp[i]]);
 		}
-		var weeks = obj[i].duration.replace("weeks","");
-		if (weeks == durationlength.replace("weeks", "")) {
-				selectCountry.push(obj[i]);
-		}	
-	}
-	return selectCountry; */
 }
+setTimeout(function(){
+selectCamp(SummerCamps.CampData.summerCamps, 101)
+}, 2000);
 
+// for(var i =0 ; i<22; i++){
+// 	summerCamps.CampData[i];
+
+// }
 
