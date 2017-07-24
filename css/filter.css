@@ -10,6 +10,10 @@ a {
     display: block;
 }
 
+.fastupdate{
+    display:inline;
+}
+
 .filter-box{
     display:inline-block;
     width:200px;
