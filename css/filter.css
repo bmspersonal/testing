@@ -1,4 +1,4 @@
-body {
+body{
     padding-top: 100px;
     background-image: url("../images/ananas-bg.jpg");
     background-repeat: no-repeat;
@@ -14,8 +14,7 @@ a {
     display:inline-block;
     width:200px;
     padding-left:15px;
-/*    padding-top: 25px;
-*/}
+}
 
 .content-table{
     width: 80%;
