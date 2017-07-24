@@ -131,7 +131,7 @@ ul{
     padding-bottom: 50px;
 }
 .col-lg-8{
-    background-color: #d5d4d4;
+    background-color: #f2f2f2;
     padding-left: 0;
     padding-right: 0;
 }
@@ -147,7 +147,7 @@ form{
 
 }
 .contact-content{
-    background-color:#d5d4d4;
+    background-color:#f2f2f2;
     height: 572px; 
 }
 .btn{
@@ -176,7 +176,7 @@ label {
       font-family: 'Open Sans', sans-serif;
       font-weight: 600;
     font-size: 25px;
-    color: #ffff26;
+    color: #22a09f;
 }
 .email{
     padding-top: 20px;
@@ -184,7 +184,7 @@ label {
 }
 .social-icon i{
     padding-top: 30px;
-     color: #ffff26;
+     color: #22a09f;
      padding-right:15px; 
 }
 .col-md-3.footer-brand{
