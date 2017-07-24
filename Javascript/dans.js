@@ -16,7 +16,7 @@ function callFilters(){
     var categoryData = categoryFilter(countryData);
     //var durationData = durationFilter(categoryData);
     var ageData = ageFilter(categoryData);
-    $(".content-table").text(JSON.stringify(durationData));//Testing out stuff
+    $(".content-table").text(JSON.stringify(ageData));//Testing out stuff
 }
 
 function countryFilter(obj) {
@@ -30,7 +30,7 @@ function countryFilter(obj) {
                 selectCountry.push(objson[i]);
                 flag = 1;
             }	
-        }   
+        }
     }
     if(flag == 1)
         return selectCountry;
@@ -82,15 +82,14 @@ function ageFilter(obj) {
     var selectAge = [];
     var flag = 0;
 	for (var i = 0; i < obj.length; i++) {
+        var dataAgeArray = obj[i].agegroup.replace("years", "").split("-");
         for(var j = 0; j < ageList.length; j++){
-            var 
-            var weeks = parseInt(obj[i].age.replace("days", ""));
-            var ageChecked = ageList[j].value * 5;
-            if (weeks <= ageChecked && ageList[j].checked === true) {
+            var ageArray = ageList[j].value.split("-");
+            if(parseInt(ageArray[0]) > parseInt(dataAgeArray[0]) || (parseInt(ageArray[1]) != undefined && parseInt(ageArray[1] < parseInt(dataAgeArray[1])))){
                 selectAge.push(obj[i]);
                 flag = 1;
             }
-        }   
+        }
     }
     if(flag == 1)
         return selectAge;
