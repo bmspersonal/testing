@@ -23,5 +23,20 @@ a {
 .table{
     background-color: white;
 }
+.modal-dialog {
+    width:100%;
+}
+
+.modal-dialog .modal-content {
+    width:800px;
+    margin:auto;
+}
+.modal-content .modal-body {
+    background-image:url("../images/camp.jpg");
+    background-size:50% 100%;
+    background-position:right;
+    background-repeat: no-repeat;
+    font-weight:bold;
+}
 
             
