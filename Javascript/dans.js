@@ -29,7 +29,7 @@ function countryFilter(obj) {
             if (objson[i].country == countryList[j].value && countryList[j].checked === true) {
                 selectCountry.push(objson[i]);
                 flag = 1;
-            }	
+            }
         }
     }
     if(flag == 1)
@@ -85,7 +85,13 @@ function ageFilter(obj) {
         var dataAgeArray = obj[i].agegroup.replace("years", "").split("-");
         for(var j = 0; j < ageList.length; j++){
             var ageArray = ageList[j].value.split("-");
-            if(parseInt(ageArray[0]) > parseInt(dataAgeArray[0]) || (parseInt(ageArray[1]) != undefined && parseInt(ageArray[1] < parseInt(dataAgeArray[1])))){
+            console.log("===><>< " + ageArray[1]);
+            if(isNaN(ageArray[1]) && ageList.checked === true){
+                if(parseInt(ageArray[0]) > parseInt(dataAgeArray[0]) && parseInt(ageArray[0]) < parseInt(dataAgeArray[1])){
+                    selectAge.push(obj[i]);
+                    flag = 1;
+                }
+            }else if(((parseInt(ageArray[0]) > parseInt(dataAgeArray[0]) && parseInt(ageArray[0]) < parseInt(dataAgeArray[1])) || (parseInt(ageArray[1]) > parseInt(dataAgeArray[0]) && parseInt(ageArray[1]) < parseInt(dataAgeArray[1]))) && ageList[j].checked === true){
                 selectAge.push(obj[i]);
                 flag = 1;
             }
