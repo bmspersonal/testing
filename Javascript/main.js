@@ -22,15 +22,12 @@ alert("clicked");
 }
 
 function callFilters(){
-   
     clearTable();
-
     var countryData = countryFilter(SummerCamps.CampData);
     var categoryData = categoryFilter(countryData);
-   // var durationData = durationFilter(categoryData);
-    var ageData = ageFilter(categoryData);
+    var durationData = durationFilter(categoryData);
+    var ageData = ageFilter(durationData);
     createTable(ageData);
-    
    // $(".content-table").text(JSON.stringify(durationData));//Testing out stuff
 }
 
@@ -80,9 +77,12 @@ function durationFilter(obj) {
     var flag = 0;
 	for (var i = 0; i < obj.length; i++) {
         for(var j = 0; j < durationList.length; j++){
-            var weeks = parseInt(obj[i].duration.replace("days", ""));
-            var durationChecked = durationList[j].value * 5;
-            if (weeks <= durationChecked && durationList[j].checked === true) {
+            var days = parseInt(obj[i].duration.replace("days", ""));
+            var durationChecked = durationList[j].value * 30;
+            if (durationChecked === 30 && days <= durationChecked && durationList[j].checked === true) {
+                selectDuration.push(obj[i]);
+                flag = 1;
+            }else if (days >= 30 && days <= durationChecked && durationList[j].checked === true) {
                 selectDuration.push(obj[i]);
                 flag = 1;
             }

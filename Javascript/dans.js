@@ -1,7 +1,7 @@
 var SummerCamps = {};
 
 
-var summerCamps = $.get("https://api.myjson.com/bins/akqr3", function(data) {
+var summerCamps = $.get("https://api.myjson.com/bins/e1hhr", function(data) {
     SummerCamps.CampData = Object.assign({}, data);
 }, 'json');
 
@@ -14,8 +14,8 @@ function addEventsFilters(){
 function callFilters(){
     var countryData = countryFilter(SummerCamps.CampData);
     var categoryData = categoryFilter(countryData);
-    //var durationData = durationFilter(categoryData);
-    var ageData = ageFilter(categoryData);
+    var durationData = durationFilter(categoryData);
+    var ageData = ageFilter(durationData);
     $(".content-table").text(JSON.stringify(ageData));//Testing out stuff
 }
 
@@ -63,9 +63,12 @@ function durationFilter(obj) {
     var flag = 0;
 	for (var i = 0; i < obj.length; i++) {
         for(var j = 0; j < durationList.length; j++){
-            var weeks = parseInt(obj[i].duration.replace("days", ""));
-            var durationChecked = durationList[j].value * 5;
-            if (weeks <= durationChecked && durationList[j].checked === true) {
+            var days = parseInt(obj[i].duration.replace("days", ""));
+            var durationChecked = durationList[j].value * 30;
+            if (duration === 30 && days <= durationChecked && durationList[j].checked === true) {
+                selectDuration.push(obj[i]);
+                flag = 1;
+            }else if (days >= 30 && days <= durationChecked && durationList[j].checked === true) {
                 selectDuration.push(obj[i]);
                 flag = 1;
             }
