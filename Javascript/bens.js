@@ -11,14 +11,20 @@ function selectCamp(input, number) {
 	var selectedCamp = input.campData[index];
 	$("h3.modal-title").append(selectedCamp.name).css("font-weight", "bold");
 	$("h4.modal-title").append(selectedCamp.description);
+	$(".modal-header").css("background-color", "#90EE90");
+	$(".modal-footer").css("background-color","#FFD4AA")
 	var showProp = Object.keys(selectedCamp);
 	console.log(showProp);
 		for(var i = 3; i < showProp.length; i++) {
-			$("#"+showProp[i]).text(showProp[i]+": "+selectedCamp[showProp[i]]);
+			$("#"+showProp[i]).html(showProp[i]+": "+selectedCamp[showProp[i]]);
 		}
+		
 }
+$("#register").on("click", function(){
+	window.open( "payment.html", "_blank")
+});
 setTimeout(function(){
-selectCamp(SummerCamps.CampData.summerCamps, 101)
+selectCamp(SummerCamps.CampData.summerCamps, 151)
 }, 2000);
 
 // for(var i =0 ; i<22; i++){
