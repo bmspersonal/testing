@@ -1,24 +1,28 @@
-     body {
+body {
+    padding-top: 100px;
+    background-image: url("../images/ananas-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
 
-                font-family: 'Montserrat', sans-serif;
-            }
+a {
+    display: block;
+}
 
-            a {
-                display: block;
-            }
+.filter-box{
+    display:inline-block;
+    width:200px;
+    padding-left:15px;
+/*    padding-top: 25px;
+*/}
 
-            a img.logo{
-                width:10%;
-            }
-
-            .filter-box{
-                display:inline-block;
-                width:200px;
-            }
-
-            .content-table{
-                width: 80%;
-                display: inline-block;
-            }
+.content-table{
+    width: 80%;
+    display: inline-block;
+}
+.table{
+    background-color: white;
+}
 
             
