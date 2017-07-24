@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<title>Google Maps</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Daniel Turgeman">
+
+        <style>
+
+        div#googleMap{
+
+            height:400px;
+            width: 50%;
+
+            
+        }
+
+
+        </style>
+
+	</head>
+	<body>
+
+        <h1>Find your camp</h1>
+        <div id="googleMap"></div>
+
+	
+    <script>
+    function initMap(){
+
+        //options for our map
+        var options = {
+            zoom: 8,
+            center:{
+                lat:40.7128,
+                lng:-74.0059
+            },
+        }
+
+        //Map
+        var map = new google.maps.Map(document.getElementById('googleMap'), options);
+
+       /*
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: '<h1>Breezemont Day Camp<h1><span>Day Camp for Boys & Girls ages 3-13 in a beautiful country setting 45 minutes north of New York City.</span>'
+
+
+        })
+
+        marker.addListener('click', function (){
+            infoWindow.open(map,marker);
+        })*/
+
+        addMarker({
+            coords: {lat:40.7127837, lng:-74.00594130000002},
+            content:'<h1>Breezemont Day Camp<h1><span>Day Camp for Boys & Girls ages 3-13 in a beautiful country setting 45 minutes north of New York City.</span>'
+        });
+        addMarker({
+            coords: {lat:40.6781784, lng:-73.9441579},
+            content: '<h1>Breezemont Day Camp<h1><span>Day Camp for Boys & Girls ages 3-13 in a beautiful country setting 45 minutes north of New York City.</span>'
+        });
+        addMarker({
+            coords: {lat:40.789142, lng:-73.13496099999998},
+            content: '<h1>Breezemont Day Camp<h1><span>Day Camp for Boys & Girls ages 3-13 in a beautiful country setting 45 minutes north of New York City.</span>'
+        });
+
+        //add markers
+        function addMarker(props){
+            var marker = new google.maps.Marker({
+            position: props.coords,
+            map: map
+        });
+
+        if(props.content){
+
+         var infoWindow = new google.maps.InfoWindow({
+            content: '<h1>Breezemont Day Camp<h1><span>Day Camp for Boys & Girls ages 3-13 in a beautiful country setting 45 minutes north of New York City.</span>'
+        })
+
+        marker.addListener('click', function (){
+            infoWindow.open(map,marker);
+        })
+        
+    }
+    }
+
+    
+    
+
+    }
+    </script>
+
+		
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVHMjAxV9JYzkQbuNpUflIY9YGc2N04y4&callback=initMap">
+    </script>
+	</body>
+</html>
+
