@@ -2,7 +2,7 @@ var SummerCamps = {};
 var table = $("#content-data");
 
 
-var summerCamps = $.get("https://api.myjson.com/bins/akqr3", function(data) {
+var summerCamps = $.get("https://api.myjson.com/bins/e1hhr", function(data) {
     SummerCamps.CampData = Object.assign({}, data);
 }, 'json');
 
@@ -16,7 +16,7 @@ function addClick(){
 console.log("addlclick");
 console.log(table);
 table.find("span").click(function () {
-    selectCamp(SummerCamps.CampData.summerCamps, this.id);
+    selectCamp(SummerCamps.CampData.summerCamps, parseInt(this.id));
 })
 
 }
@@ -135,7 +135,7 @@ function createTable(ageData){
         var text = $("<span/>");
 
         text.addClass("clickable").attr("id", ageData[i].id).text(ageData[i].name).css({"text-decoration" : "underline","cursor" : "pointer"});
-
+        text.attr({"data-toggle":"modal","data-target":"#campModal"});
 
         $("<td/>").append(text).appendTo(row);
         $("<td/>").text(ageData[i].country).appendTo(row);
@@ -154,17 +154,18 @@ function clearTable(){
 }
 
 function selectCamp(input, number) {
+    //alert();
     var index = input.listOfCamps.indexOf(number);
     console.log(input, number, index);
     var selectedCamp = input.campData[index];
-    $("h3.modal-title").append(selectedCamp.name).css("font-weight", "bold");
-    $("h4.modal-title").append(selectedCamp.description);
+    $("h3.modal-title").text(selectedCamp.name).css("font-weight", "bold");
+    $("h4.modal-title").text(selectedCamp.description);
     $(".modal-header").css("background-color", "#90EE90");
     $(".modal-footer").css("background-color","#FFD4AA")
     var showProp = Object.keys(selectedCamp);
     console.log(showProp);
         for(var i = 3; i < showProp.length; i++) {
-            $("#"+showProp[i]).html(showProp[i]+": "+selectedCamp[showProp[i]]);
+            $("#"+showProp[i]).text(showProp[i]+": "+selectedCamp[showProp[i]]);
         }
         
 }
